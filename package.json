@@ -1,8 +1,8 @@
 {
   "name": "gamer-multimidia-controller",
-  "productName": "gamer-multimidia-controller",
+  "productName": "Gamer Multimidia Controller",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Controll Multimidia",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -18,7 +18,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "socket.io": "^4.7.4",
+    "typescript": "^5.3.3",
+    "ws": "^8.16.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.2.0",
@@ -27,6 +30,10 @@
     "@electron-forge/maker-squirrel": "^7.2.0",
     "@electron-forge/maker-zip": "^7.2.0",
     "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
-    "electron": "28.2.3"
+    "electron": "^28.2.3"
+  },
+  "build": {
+    "appId": "com.FCeleste.GMC",
+    "files": "!build-assets${/*}"
   }
 }
